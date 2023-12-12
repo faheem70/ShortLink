@@ -4,28 +4,28 @@ module.exports = function (app) {
     app.use(
         '/api/v1/login',
         createProxyMiddleware({
-            target: 'http://localhost:4000',
+            target: 'https://shortlink-bakcend.onrender.com',
             changeOrigin: true,
         })
     );
     app.use(
         '/api/v1/register',
         createProxyMiddleware({
-            target: 'http://localhost:4000',
+            target: 'https://shortlink-bakcend.onrender.com',
             changeOrigin: true,
         })
     );
     app.use(
         '/api/v1/me',
         createProxyMiddleware({
-            target: 'http://localhost:4000',
+            target: 'https://shortlink-bakcend.onrender.com',
             changeOrigin: true,
         })
     );
     app.use(
         '/api/v1/logout',
         createProxyMiddleware({
-            target: 'http://localhost:4000',
+            target: 'https://shortlink-bakcend.onrender.com',
             changeOrigin: true,
         })
     );

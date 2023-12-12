@@ -18,7 +18,7 @@ const ShortLinkForm = () => {
 
     const createShortLink = async () => {
         try {
-            const response = await axios.post('http://localhost:4000/api/v1/short-links', { url });
+            const response = await axios.post('https://shortlink-bakcend.onrender.com/api/v1/short-links', { url });
             setShortId(response.data.id);
             setError('');
         } catch (error) {

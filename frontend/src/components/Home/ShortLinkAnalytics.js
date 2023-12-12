@@ -9,7 +9,7 @@ const ShortLinkAnalytics = () => {
 
     const getAnalytics = async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/api/v1/analytics/${shortId}`);
+            const response = await axios.get(`https://shortlink-bakcend.onrender.com/api/v1/analytics/${shortId}`);
             setAnalytics(response.data);
             setError('');
         } catch (error) {
