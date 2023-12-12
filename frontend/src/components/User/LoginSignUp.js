@@ -6,7 +6,7 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import FaceIcon from "@mui/icons-material/Face";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
-//import { useAlert } from "react-alert";
+
 import { toast } from "react-toastify";
 const LoginSignUp = (location) => {
     const dispatch = useDispatch();
