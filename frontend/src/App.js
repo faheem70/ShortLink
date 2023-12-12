@@ -1,6 +1,6 @@
 import "./App.css";
 import { useEffect, useState } from "react";
-import { HashRouterRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import React from "react";
 import LoginSignUp from "./components/User/LoginSignUp";
 import ShortLinkForm from "./components/Home/ShortLinkForm";
