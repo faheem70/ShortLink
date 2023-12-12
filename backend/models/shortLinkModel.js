@@ -10,11 +10,16 @@ const shortLinkSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
+    expiresAt: { type: Date, default: () => Date.now() + 48 * 60 * 60 * 1000 },
     visitHistory: [{ timestamp: { type: Number } }],
 },
+
     {
         timestamps: true
-    });
+    }
+
+
+);
 
 const ShortLink = mongoose.model('ShortLink', shortLinkSchema);
 
