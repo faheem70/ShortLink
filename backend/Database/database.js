@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const url = "mongodb://localhost:27017/yourDatabaseName"
-mongoose.connect(url);
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
 
