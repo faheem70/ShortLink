@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = "mongodb://localhost:27017/yourDatabaseName"
+const url = "mongodb://localhost:27017/ShortLink"
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
