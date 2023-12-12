@@ -36,7 +36,7 @@ const LoginSignUp = (location) => {
             await dispatch(login(loginEmail, loginPassword));
             setLoginSuccess(true);
         } catch (error) {
-            toast("Invalid email or password. Please try again."); // Display error message
+            toast.error("Invalid email or password. Please try again."); // Display error message
         }
 
     };
@@ -85,7 +85,7 @@ const LoginSignUp = (location) => {
         // Reset registration success after handling the alert
         if (registerSuccess) {
             setRegisterSuccess(false);
-            toast("Registration Successfully");
+            toast.success("Registration Successfully");
         }
     }, [dispatch, error, alert, isAuthenticated, location?.search]);
 
