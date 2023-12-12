@@ -12,7 +12,9 @@ const port = 4000;
 require('./Database/database');
 
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors({
+    origin: ['https://shortid-91yj.onrender.com'],
+}));
 
 app.use('/api/v1', router);
 app.use('/api/v1', shortLink);
