@@ -38,7 +38,7 @@ const LoginSignUp = (location) => {
         } catch (error) {
             toast.error("Invalid email or password. Please try again.");
         }
-
+        //add
     };
 
     const registerSubmit = (e) => {

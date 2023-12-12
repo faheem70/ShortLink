@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { thunk } from 'redux-thunk';  // Import 'thunk' correctly
-import { composeWithDevTools } from "redux-devtools-extension";
+//import { composeWithDevTools } from "@redux-devtools/extension";
 
 import { userReducer } from "./reducers/userReducer";
 
