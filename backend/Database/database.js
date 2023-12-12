@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const url = "mongodb+srv://shortLink1:<password>@cluster0.uihjk1o.mongodb.net/?retryWrites=true&w=majority"
+const url = "mongodb+srv://shortLink1:ShortLink123@cluster0.uihjk1o.mongodb.net/?retryWrites=true&w=majority"
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true });
 
 const db = mongoose.connection;
