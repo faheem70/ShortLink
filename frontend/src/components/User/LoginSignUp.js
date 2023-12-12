@@ -36,7 +36,7 @@ const LoginSignUp = (location) => {
             await dispatch(login(loginEmail, loginPassword));
             setLoginSuccess(true);
         } catch (error) {
-            toast.error("Invalid email or password. Please try again."); // Display error message
+            toast.error("Invalid email or password. Please try again.");
         }
 
     };
