@@ -18,7 +18,7 @@ const shortLinkSchema = new mongoose.Schema({
         timestamps: true
     }
 
-    //hhh
+
 );
 
 const ShortLink = mongoose.model('ShortLink', shortLinkSchema);

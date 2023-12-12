@@ -18,7 +18,9 @@ const root = createRoot(document.getElementById("root"));
 root.render(
     <Provider store={store}>
         <AlertProvider template={AlertTemplate} {...options}>
+
             <App />
+            <ToastContainer />
         </AlertProvider>
     </Provider>
 );

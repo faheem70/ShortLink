@@ -6,11 +6,11 @@ import LockOpenIcon from "@mui/icons-material/LockOpen";
 import FaceIcon from "@mui/icons-material/Face";
 import { useDispatch, useSelector } from "react-redux";
 import { clearErrors, login, register } from "../../actions/userAction";
-import { useAlert } from "react-alert";
-
+//import { useAlert } from "react-alert";
+import { toast } from "react-toastify";
 const LoginSignUp = (location) => {
     const dispatch = useDispatch();
-    const alert = useAlert();
+    //const alert = useAlert();
     const navigate = useNavigate();
     const { error, isAuthenticated } = useSelector((state) => state.user);
 
@@ -36,7 +36,7 @@ const LoginSignUp = (location) => {
             await dispatch(login(loginEmail, loginPassword));
             setLoginSuccess(true);
         } catch (error) {
-            alert.error("Invalid email or password. Please try again."); // Display error message
+            toast("Invalid email or password. Please try again."); // Display error message
         }
 
     };
@@ -71,7 +71,7 @@ const LoginSignUp = (location) => {
     useEffect(() => {
         if (error) {
 
-            alert.error("Invalid Credential");
+            toast("Invalid Credential");
             dispatch(clearErrors());
         }
 
@@ -85,7 +85,7 @@ const LoginSignUp = (location) => {
         // Reset registration success after handling the alert
         if (registerSuccess) {
             setRegisterSuccess(false);
-            alert.success("Registration Successfully");
+            toast("Registration Successfully");
         }
     }, [dispatch, error, alert, isAuthenticated, location?.search]);
 
