@@ -72,15 +72,13 @@ const LoginSignUp = (location) => {
         }
 
         if (isAuthenticated) {
-            navigate("/short");
-
-
+            navigate("/");
         }
 
 
         // Reset registration success after handling the alert
 
-    }, [dispatch, error, alert, isAuthenticated, location?.search]);
+    }, [dispatch, error, isAuthenticated]);
 
     return (
         <Fragment>
