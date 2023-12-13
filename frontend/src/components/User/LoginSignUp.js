@@ -72,7 +72,7 @@ const LoginSignUp = (location) => {
         }
 
         if (isAuthenticated) {
-            navigate(location?.search ? location?.search.split("=")[1] : "/short");
+            navigate("/short");
 
 
         }
