@@ -20,7 +20,7 @@ export const login = (email, password) => async (dispatch) => {
         const config = { headers: { "Content-Type": "application/json" } };
 
         const { data } = await axios.post(
-            `/api/v1/login`,
+            `https://shortlink-bakcend.onrender.com/api/v1/login`,
             { email, password },
             config
         );
@@ -39,7 +39,7 @@ export const register = (userData) => async (dispatch) => {
         // Remove the "multipart/form-data" header if not dealing with file uploads
         // const config = { headers: { "Content-Type": "multipart/form-data" } };
 
-        const { data } = await axios.post(`/api/v1/register`, userData);
+        const { data } = await axios.post(`https://shortlink-bakcend.onrender.com/api/v1/register`, userData);
 
         dispatch({ type: REGISTER_USER_SUCCESS, payload: data.user });
     } catch (error) {
@@ -55,7 +55,7 @@ export const register = (userData) => async (dispatch) => {
 // Logout User
 export const logout = () => async (dispatch) => {
     try {
-        await axios.get(`/api/v1/logout`);
+        await axios.get(`https://shortlink-bakcend.onrender.com/api/v1/logout`);
 
         dispatch({ type: LOGOUT_SUCCESS });
     } catch (error) {
