@@ -28,17 +28,13 @@ const LoginSignUp = (location) => {
     });
 
     const { name, email, password } = user;
-    const [loginSuccess, setLoginSuccess] = useState(false);
-    const [registerSuccess, setRegisterSuccess] = useState(false);
+
     const loginSubmit = async (e) => {
         e.preventDefault();
-        try {
-            await dispatch(login(loginEmail, loginPassword));
-            setLoginSuccess(true);
-        } catch (error) {
-            toast.error("Invalid email or password. Please try again.");
-        }
-        //add
+
+        dispatch(login(loginEmail, loginPassword));
+
+
     };
 
     const registerSubmit = (e) => {
@@ -75,18 +71,15 @@ const LoginSignUp = (location) => {
             dispatch(clearErrors());
         }
 
-        if (isAuthenticated && !registerSuccess) {
+        if (isAuthenticated) {
             navigate(location?.search ? location?.search.split("=")[1] : "/short");
-            setLoginSuccess(true);
+
 
         }
 
 
         // Reset registration success after handling the alert
-        if (registerSuccess) {
-            setRegisterSuccess(false);
-            toast.success("Registration Successfully");
-        }
+
     }, [dispatch, error, alert, isAuthenticated, location?.search]);
 
     return (
