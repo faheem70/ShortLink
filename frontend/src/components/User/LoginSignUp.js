@@ -40,7 +40,7 @@ const LoginSignUp = (location) => {
     const registerSubmit = (e) => {
         e.preventDefault();
         dispatch(register(user));
-        setRegisterSuccess(true);
+
     };
 
     const handleChange = (e) => {
