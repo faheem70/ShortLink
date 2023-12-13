@@ -33,13 +33,16 @@ const LoginSignUp = (location) => {
         e.preventDefault();
 
         dispatch(login(loginEmail, loginPassword));
-
+        if (isAuthenticated) {
+            navigate('/short')
+        }
 
     };
 
     const registerSubmit = (e) => {
         e.preventDefault();
         dispatch(register(user));
+        toast.success("Registeration Successfully");
 
     };
 
@@ -71,9 +74,7 @@ const LoginSignUp = (location) => {
             dispatch(clearErrors());
         }
 
-        if (isAuthenticated) {
-            navigate("/");
-        }
+
 
 
         // Reset registration success after handling the alert
