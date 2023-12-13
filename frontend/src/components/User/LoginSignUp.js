@@ -35,6 +35,8 @@ const LoginSignUp = (location) => {
         dispatch(login(loginEmail, loginPassword));
         if (isAuthenticated) {
             navigate('/short')
+        } else {
+            toast.error("Invalid credential")
         }
 
     };
@@ -70,7 +72,7 @@ const LoginSignUp = (location) => {
     useEffect(() => {
         if (error) {
 
-            toast("Invalid Credential");
+            toast.error("Invalid Credential");
             dispatch(clearErrors());
         }
 
